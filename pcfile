@@ -16,7 +16,7 @@ git branch: 'master', url: 'https://github.com/Jagannath92/java.master.git'
      // archiving artifacts
 	 archiveArtifacts 'target/*.jar'
    }
-   stage ('clean') (
+   stage ('clean') {
 	cleanWs() 
 }
 }
