@@ -1,4 +1,4 @@
-node (n1){
+node {
 
    stage('SCM') {
 git 'https://github.com/Jagannath92/java.master.git'   
