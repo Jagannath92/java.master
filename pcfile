@@ -1,9 +1,8 @@
 node (n1){
 
    stage('SCM') {
-      // git clone
-          git 'https://github.com/Jagannath92/java.master.git'
-   }
+git 'https://github.com/Jagannath92/java.master.git'   
+}
    
    stage ('build the packages') {
       // mvn package
