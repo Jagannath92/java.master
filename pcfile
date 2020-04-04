@@ -7,6 +7,6 @@ git branch: 'sprint1', url: 'https://github.com/Jagannath92/java.master.git'
    
    stage ('build the packages') {
       // mvn package
-	  sh 'mvn test'
+	  sh 'mvn clean'
    }
 }
