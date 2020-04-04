@@ -7,9 +7,10 @@ git branch: 'master', url: 'https://github.com/Jagannath92/java.master.git'
 
    stage ('build the packages') {
       // mvn package
-          sh 'mvn package'
-   }
-stage ( 'a a')
+          sh 'mvn clean'
+	}
+	stage ('archival artifacts')
 	archiveArtifacts 'target/*.jar'
+   }
 }
 
