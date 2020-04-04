@@ -1,19 +1,23 @@
-node{
+node (n1){
 
    stage('SCM') {
       // git clone
-git 'https://github.com/Jagannath92/java.master.git'
-   }
-   
-   stage ('build the packages') {
-      // mvn package
-	  sh 'mvn package'
+git branch: 'master', url: 'https://github.com/Jagannath92/java.master.git'
    }
 
-   
-   
+   stage ('build the packages') {
+      // mvn package
+          sh 'mvn clean'
+   }
+
+
+
    stage ('archival') {
      // archiving artifacts
-	 archiveArtifacts 'target/*.jar'
+         archiveArtifacts 'target/*.jar'
    }
+   stage ('clean') {
+        cleanWs()
 }
+}
+
