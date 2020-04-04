@@ -1,4 +1,4 @@
-node (n1){
+node{
 
    stage('SCM') {
       // git clone
