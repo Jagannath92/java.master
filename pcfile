@@ -7,13 +7,6 @@ git branch: 'sprint1', url: 'https://github.com/Jagannath92/java.master.git'
    
    stage ('build the packages') {
       // mvn package
-	  sh 'mvn package'
-   }
-
-   
-   
-   stage ('archival') {
-     // archiving artifacts
-	 archiveArtifacts 'target/*.jar'
+	  sh 'mvn test'
    }
 }
